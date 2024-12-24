@@ -43,44 +43,44 @@ class _MacosUiState extends State<MacosUi> {
     );
   }
 
-  Widget _buildMenuBar() {
-    return Container(
-      height: 50,
-      color: Colors.black.withOpacity(0.5),
-      child: Row(
-        children: [
-          const SizedBox(width: 10),
-          const Text(
-            "",
-            style: TextStyle(color: Colors.white, fontSize: 24),
-          ),
-          const SizedBox(width: 10),
-          const Text(
-            "File",
-            style: TextStyle(color: Colors.white),
-          ),
-          const SizedBox(width: 10),
-          const Text(
-            "Edit",
-            style: TextStyle(color: Colors.white),
-          ),
-          const Spacer(),
-          const Text(
-            "Wi-Fi",
-            style: TextStyle(color: Colors.white),
-          ),
-          const SizedBox(width: 10),
-          const Icon(Icons.battery_charging_full, color: Colors.white),
-          const SizedBox(width: 10),
-          Text(
-            TimeOfDay.now().format(context),
-            style: const TextStyle(color: Colors.white),
-          ),
-          const SizedBox(width: 10),
-        ],
-      ),
-    );
-  }
+  // Widget _buildMenuBar() {
+  //   return Container(
+  //     height: 50,
+  //     color: Colors.black.withOpacity(0.5),
+  //     child: Row(
+  //       children: [
+  //         const SizedBox(width: 10),
+  //         const Text(
+  //           "",
+  //           style: TextStyle(color: Colors.white, fontSize: 24),
+  //         ),
+  //         const SizedBox(width: 10),
+  //         const Text(
+  //           "File",
+  //           style: TextStyle(color: Colors.white),
+  //         ),
+  //         const SizedBox(width: 10),
+  //         const Text(
+  //           "Edit",
+  //           style: TextStyle(color: Colors.white),
+  //         ),
+  //         const Spacer(),
+  //         const Text(
+  //           "Wi-Fi",
+  //           style: TextStyle(color: Colors.white),
+  //         ),
+  //         const SizedBox(width: 10),
+  //         const Icon(Icons.battery_charging_full, color: Colors.white),
+  //         const SizedBox(width: 10),
+  //         Text(
+  //           TimeOfDay.now().format(context),
+  //           style: const TextStyle(color: Colors.white),
+  //         ),
+  //         const SizedBox(width: 10),
+  //       ],
+  //     ),
+  //   );
+  // }
 
   Widget _buildDesktopIcons() {
     return Positioned.fill(
