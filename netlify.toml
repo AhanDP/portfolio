@@ -7,7 +7,4 @@ publish = "build/web"
 PUB_CACHE = "/opt/buildhome/.pub-cache"
 
 [[plugins]]
-package = "@netlify/plugin-cache-core"
-
-[[plugins]]
 package = "netlify-plugin-flutter"
