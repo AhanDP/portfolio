@@ -1,7 +1,10 @@
 [build]
-base = ""
-publish = "build/web"
 command = "bash ./build_flutter.sh"
+publish = "build/web"
+
+[context.production]
+[context.production.environment]
+PUB_CACHE = "/opt/buildhome/.pub-cache"
 
 [[plugins]]
-package = "@netlify/plugin-local-install"
+package = "@netlify/plugin-cache-core"
