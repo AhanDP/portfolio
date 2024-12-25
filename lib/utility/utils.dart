@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'dart:developer';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class Utils {
   }
 
   static void logError(String code, String message) =>
-      print('Error: $code\nError Message: $message');
+      log('Error: $code\nError Message: $message');
 
   static String timestamp() => DateTime.now().millisecondsSinceEpoch.toString();
 
