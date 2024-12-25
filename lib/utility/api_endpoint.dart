@@ -1,6 +1,6 @@
 
 class ApiEndpoint {
-  String? _registerUrl;
+  /*String? _registerUrl;
   String? _loginUrl;
   String? _fetchLeadUrl;
   String? _loanListUrl;
@@ -44,7 +44,7 @@ class ApiEndpoint {
     _refreshUrl = "$apiBaseUrl/v1/user/refresh-token";
     _loanTypeUrl = "$apiBaseUrl/v1/user/portfolio-loan-list";
     _fcmUrl = "$apiBaseUrl/v1/user/fcm-token";
-  }
+  }*/
 }
 
 final apiEndpoint = ApiEndpoint();

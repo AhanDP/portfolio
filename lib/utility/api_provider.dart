@@ -1,15 +1,5 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
-
 import '../model/user.dart';
-import '../response_handler/fcm_response.dart';
-import '../response_handler/lead_response.dart';
-import '../response_handler/loan_type_response.dart';
-import '../response_handler/login_response.dart';
-import '../response_handler/register_response.dart';
-import 'api_endpoint.dart';
 import 'logging_interceptor.dart';
 
 class ApiProvider {
@@ -26,10 +16,10 @@ class ApiProvider {
       'x-platform': 'portfolio'
     };
     options.headers.addAll(customHeaders);
-    loadAuthorizationHeader();
+    // loadAuthorizationHeader();
   }
 
-  Future<void> loadAuthorizationHeader() async {
+  /*Future<void> loadAuthorizationHeader() async {
     User? user = await User.get();
 
     if (user != null) {
@@ -127,9 +117,9 @@ class ApiProvider {
     } catch (error) {
       return FcmResponse.withError(false, _handleError(error, postFcmToken, request!)!);
     }
-  }
+  }*/
 
-  String? _handleError(error, Function f, Map<String, dynamic> request) {
+  /*String? _handleError(error, Function f, Map<String, dynamic> request) {
     log('error.response :: $error');
 
     String? errorDescription = "";
@@ -148,30 +138,30 @@ class ApiProvider {
       } else {
         debugPrint('dioError.type :: ${dioError.type}');
         switch (dioError.type) {
-          case DioErrorType.cancel:
+          case DioExceptionType.cancel:
             errorDescription = "Request to API server was cancelled";
             break;
-          case DioErrorType.connectionTimeout:
+          case DioExceptionType.connectionTimeout:
             errorDescription = "Connection timeout with API server";
             break;
-          case DioErrorType.unknown:
+          case DioExceptionType.unknown:
             errorDescription =
                 "Connection to API server failed due to internet connection";
             break;
-          case DioErrorType.receiveTimeout:
+          case DioExceptionType.receiveTimeout:
             errorDescription = "Receive timeout in connection with API server";
             break;
-          case DioErrorType.badResponse:
+          case DioExceptionType.badResponse:
             errorDescription =
                 "Received invalid status code: ${dioError.response!.statusCode}";
             break;
-          case DioErrorType.sendTimeout:
+          case DioExceptionType.sendTimeout:
             errorDescription = "Send timeout in connection with API server";
             break;
-          case DioErrorType.badCertificate:
+          case DioExceptionType.badCertificate:
             errorDescription = "Certificate error";
             break;
-          case DioErrorType.connectionError:
+          case DioExceptionType.connectionError:
             errorDescription = "Certificate error";
             break;
         }
@@ -180,7 +170,7 @@ class ApiProvider {
       errorDescription = "Unexpected error occurred";
     }
     return errorDescription;
-  }
+  }*/
 
   Future<bool?> handleRefreshLogic() async {
     User? user = await User.get();
