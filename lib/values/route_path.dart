@@ -1,24 +1,25 @@
 enum RoutePath {
-  dashboard,
+  home,
   mac,
-  register,
   windows,
-  workflow,
+  android,
+  ios,
   error,
-  onBoarding,
 }
 
 extension RoutePathExtension on RoutePath {
   String get toPath {
     switch (this) {
+      case RoutePath.home:
+        return "/";
       case RoutePath.windows:
         return "/windows";
       case RoutePath.mac:
         return "/mac";
-      case RoutePath.register:
-        return "/register";
-      case RoutePath.workflow:
-        return "/workflow";
+      case RoutePath.android:
+        return "/android";
+      case RoutePath.ios:
+        return "/ios";
       default:
         return "/";
     }
@@ -26,14 +27,16 @@ extension RoutePathExtension on RoutePath {
 
   String get toName {
     switch (this) {
+      case RoutePath.home:
+        return "HOME";
       case RoutePath.windows:
         return "WINDOWS";
       case RoutePath.mac:
         return "MAC";
-      case RoutePath.register:
-        return "REGISTER";
-      case RoutePath.workflow:
-        return "WORKFLOW";
+      case RoutePath.android:
+        return "ANDROID";
+      case RoutePath.ios:
+        return "IOS";
       default:
         return "HOME";
     }
@@ -41,20 +44,20 @@ extension RoutePathExtension on RoutePath {
 
   String get toTitle {
     switch (this) {
+      case RoutePath.home:
+        return "My Home";
       case RoutePath.windows:
         return "My Windows";
       case RoutePath.mac:
         return "My Mac";
-      case RoutePath.register:
-        return "My App Register";
-      case RoutePath.workflow:
-        return "Configure Workflow";
+      case RoutePath.android:
+        return "My Android";
+      case RoutePath.ios:
+        return "Configure IOS";
       case RoutePath.error:
         return "My App Error";
-      case RoutePath.onBoarding:
-        return "Welcome to My App";
       default:
-        return "My App";
+        return "My Home";
     }
   }
 }
