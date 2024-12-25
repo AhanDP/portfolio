@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:portfolio/values/constant.dart';
 import 'package:portfolio/values/route_path.dart';
 import 'package:portfolio/widget/desktop_taskbar.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -48,11 +49,11 @@ class _MacosUiState extends State<MacosUi> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            DesktopTaskbar(icon: "windows.png", toolTip: "Change OS", onTap: () => context.go(RoutePath.windows.toPath)),
-            DesktopTaskbar(icon: "finder.png", toolTip: "Finder", onTap: () {}),
-            DesktopTaskbar(icon: "app_store.png", toolTip: "App Store", onTap: () {}),
-            DesktopTaskbar(icon: "linkedin.png", toolTip: "Linkedin", onTap: ()=> launchUrl(Uri.parse("https://www.linkedin.com/in/ahan-dp-ba19a8240"))),
-            DesktopTaskbar(icon: "profile.png", toolTip: "About Me", onTap: () {}),
+            DesktopTaskbar(icon: 'windows.png', toolTip: 'Change OS', onTap: () => context.go(RoutePath.windows.toPath)),
+            DesktopTaskbar(icon: 'finder.png', toolTip: 'Finder', onTap: () {}),
+            DesktopTaskbar(icon: 'app_store.png', toolTip: 'App Store', onTap: () {}),
+            DesktopTaskbar(icon: 'linkedin.png', toolTip: 'Linkedin', onTap: () => launchUrl(Uri.parse(constant.linkedinUrl))),
+            DesktopTaskbar(icon: 'profile.png', toolTip: 'About Me', onTap: () => launchUrl(Uri.parse(constant.resumeUrl))),
           ],
         ),
       ),

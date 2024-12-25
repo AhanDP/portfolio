@@ -4,7 +4,6 @@ import 'dart:developer';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import '../utility/api_provider.dart';
 import '../utility/locator.dart';
 

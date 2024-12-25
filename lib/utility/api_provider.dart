@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import '../model/user.dart';
 import 'logging_interceptor.dart';
 
 class ApiProvider {
@@ -172,16 +171,16 @@ class ApiProvider {
     return errorDescription;
   }*/
 
-  Future<bool?> handleRefreshLogic() async {
+  /*Future<bool?> handleRefreshLogic() async {
     User? user = await User.get();
     if (user?.accessToken != null) {
-      /*LoginResponse response =
+      *//*LoginResponse response =
           await refresh({'refresh_token': user?.refreshToken});
       if (response.status == true) {
         await user?.delete();
         return await response.user?.save();
-      }*/
+      }*//*
     }
     return false;
-  }
+  }*/
 }
