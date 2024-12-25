@@ -37,7 +37,7 @@ class ConnectivityController extends ChangeNotifier {
     try {
       var status = await _connectivity.checkConnectivity();
 
-      if (status == ConnectivityResult.none) {
+      if (status[0] == ConnectivityResult.none) {
         _isOnline = false;
         notifyListeners();
       } else {

@@ -11,7 +11,7 @@ class ApiEndpoint {
   String? _loanTypeUrl;
   String? _fcmUrl;
 
-  get registerurl => _registerUrl;
+  get registerUrl => _registerUrl;
 
   get loginUrl => _loginUrl;
 

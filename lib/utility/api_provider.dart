@@ -44,7 +44,7 @@ class ApiProvider {
   Future<RegisterResponse> register(Map<String, dynamic>? request) async {
     try {
       Response response =
-      await _dio.post(apiEndpoint.registerurl, data: request);
+      await _dio.post(apiEndpoint.registerUrl, data: request);
       if (response.statusCode == 200) {
         Map<String, dynamic> map = response.data;
         return RegisterResponse.fromMap(map);

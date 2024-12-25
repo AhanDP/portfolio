@@ -21,7 +21,7 @@ class _MacosUiState extends State<MacosUi> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/images/mac_wallpaper.png"),
+                image: AssetImage("assets/images/ios_wallpaper.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -30,32 +30,28 @@ class _MacosUiState extends State<MacosUi> {
             bottom: 20,
             left: 0,
             right: 0,
-            child: _buildDock(),
+            child: Center(
+              child: Container(
+                height: 80,
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    DesktopTaskbar(icon: 'windows.png', toolTip: 'Change OS', onTap: () => context.go(RoutePath.windows.toPath)),
+                    DesktopTaskbar(icon: 'finder.png', toolTip: 'Finder', onTap: () {}),
+                    DesktopTaskbar(icon: 'app_store.png', toolTip: 'App Store', onTap: () {}),
+                    DesktopTaskbar(icon: 'linkedin.png', toolTip: 'Linkedin', onTap: () => launchUrl(Uri.parse(constant.linkedinUrl))),
+                    DesktopTaskbar(icon: 'profile.png', toolTip: 'About Me', onTap: () => launchUrl(Uri.parse(constant.resumeUrl))),
+                  ],
+                ),
+              ),
+            ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildDock() {
-    return Center(
-      child: Container(
-        height: 80,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            DesktopTaskbar(icon: 'windows.png', toolTip: 'Change OS', onTap: () => context.go(RoutePath.windows.toPath)),
-            DesktopTaskbar(icon: 'finder.png', toolTip: 'Finder', onTap: () {}),
-            DesktopTaskbar(icon: 'app_store.png', toolTip: 'App Store', onTap: () {}),
-            DesktopTaskbar(icon: 'linkedin.png', toolTip: 'Linkedin', onTap: () => launchUrl(Uri.parse(constant.linkedinUrl))),
-            DesktopTaskbar(icon: 'profile.png', toolTip: 'About Me', onTap: () => launchUrl(Uri.parse(constant.resumeUrl))),
-          ],
-        ),
       ),
     );
   }
