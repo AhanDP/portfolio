@@ -36,9 +36,10 @@ class _IosUiState extends State<IosUi> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                         decoration: BoxDecoration(
                             color: Colors.black.withOpacity(0.7),
                             borderRadius: BorderRadius.circular(20)
@@ -61,18 +62,20 @@ class _IosUiState extends State<IosUi> {
                         )
                       ),
                       Container(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
                         decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.2),
+                            color: Colors.blue.withOpacity(0.5),
                             borderRadius: BorderRadius.circular(20)
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset('assets/icons/android_weather.png', height: 50, width: 50),
-                            const SizedBox(width: 10),
-                            const Text("91\u00B0", style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w500))
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text("91\u00B0", style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w500)),
+                            const SizedBox(height: 20),
+                            Image.asset('assets/icons/android_weather.png', height: 20, width: 20),
+                            const SizedBox(height: 5),
+                            const Text("Partly Cloudy", style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500)),
                           ],
                         )
                       ),
