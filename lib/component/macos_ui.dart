@@ -21,7 +21,7 @@ class _MacosUiState extends State<MacosUi> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/images/ios_wallpaper.png"),
+                image: AssetImage("assets/images/mac_wallpaper.png"),
                 fit: BoxFit.cover,
               ),
             ),
